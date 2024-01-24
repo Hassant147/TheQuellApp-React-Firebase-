@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #F5F5FA;
+    hyphens: auto
+}
+
+
+.left-align-title {
+    text-align: left;
+}
+
+
+/* Header.module.css */
+.textStyle {
+    color: #000;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+/* src/components/HeroSection.css */
+.hero-scroll-container {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Add this line */
+    height: 100vh;
+}
+
+
+.background-image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.foreground-container {
+    z-index: 20;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /* Adjust if needed */
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Aligns child to the bottom */
+    transition: opacity 0.3s ease;
+}
+
+.foreground-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.foreground-image {
+    max-width: 100%;
+    /* Ensures the image does not exceed the container's width */
+    max-height: 100%;
+    /* Ensures the image does not exceed the container's height */
+    object-fit: contain;
+    position: relative;
+    /* Adjusted from absolute to relative */
+    bottom: 0;
+    /* Aligns the image to the bottom */
+}
+
+.text-block {
+    position: absolute;
+    bottom: -35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-family: 'Montserrat';
+    font-size: 83px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    /* Adjust text color as needed */
+    text-align: center;
+}
+
+#sm-txt {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18.809px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.sun-image {
+    width: 250px;
+}
+/* Hero Section but for mobile and tablet */
+.mobile-hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-hero-image {
+    width: 100%;
+    height: auto; /* Adjust as needed */
+}
+
+/* subscribe newsletter */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: slideDown 0.3s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.close-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background-color: #45a049;
+}
+
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.modal-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+/*FOOT-STEPS */
+.footsteps-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -10; 
+}
+
+.footstep {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+
+/* what can Q do? */
+
+
+.flip-container {
+    perspective: 1000px; /* Allows for 3D space */
+    width: 350px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+}
+
+.flipper {
+    transition: 0.6s; /* Animation speed */
+    transform-style: preserve-3d; /* Preserve 3D during animation */
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* When the user hovers over the flip-container, the flipper inside it will rotate */
+.flip-container:hover .flipper {
+    transform: rotateY(180deg); /* Flips the card */
+}
+
+.front, .back {
+    backface-visibility: hidden; /* Hides the back face of the front panel and vice versa */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.front {
+    z-index: 2; /* Ensures front is above the back before flipping */
+    transform: rotateY(0deg); /* Front face positioned normally */
+}
+
+.back {
+    transform: rotateY(180deg); /* Back face is initially rotated */
+    transform-origin: center; /* Ensures rotation happens at the center */
+}
+/* mobile view */
+.swiper-button-next, .swiper-button-prev {
+    color: black; /* Or your preferred color */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: -25px; /* Adjust as needed */
+}
+
+.swiper-button-prev {
+    left: -25px; /* Adjust as needed */
+}
+.swiper-slide {
+    padding: 10px; 
+}

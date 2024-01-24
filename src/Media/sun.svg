@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 175.09 175.09">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="87.55" cy="87.55" fx="87.55" fy="87.55" r="87.55" gradientTransform="translate(0 175.09) rotate(-90)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f5f0e3"/>
+      <stop offset=".42" stop-color="#f4efe1"/>
+      <stop offset=".57" stop-color="#f4eeda"/>
+      <stop offset=".68" stop-color="#f4ebce"/>
+      <stop offset=".76" stop-color="#f4e8bf"/>
+      <stop offset=".77" stop-color="#f4e9c4" stop-opacity=".81"/>
+      <stop offset=".78" stop-color="#f5ebc9" stop-opacity=".64"/>
+      <stop offset=".79" stop-color="#f6edcd" stop-opacity=".49"/>
+      <stop offset=".81" stop-color="#f6eed1" stop-opacity=".36"/>
+      <stop offset=".82" stop-color="#f7efd4" stop-opacity=".24"/>
+      <stop offset=".84" stop-color="#f7f0d7" stop-opacity=".15"/>
+      <stop offset=".85" stop-color="#f7f1d9" stop-opacity=".08"/>
+      <stop offset=".88" stop-color="#f7f1da" stop-opacity=".04"/>
+      <stop offset=".91" stop-color="#f7f1db" stop-opacity="0"/>
+      <stop offset="1" stop-color="#f8f2dc" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle class="cls-1" cx="87.55" cy="87.55" r="87.55" transform="translate(-36.26 87.55) rotate(-45)"/>
+</svg>
